@@ -16,7 +16,7 @@ function foodhut_menu_info() {
         'foodhut_menu_info',
         [
             'title'       => esc_html__( 'Top Menu', 'Foodhut' ),
-            'description' => esc_html__( 'Top bar contact update options', 'Foodhut' ),
+            'description' => esc_html__( 'Menu update options', 'Foodhut' ),
             'panel'       => 'foodhut_theme_options',
             'priority'    => 160,
         ]
@@ -28,25 +28,38 @@ function foodhut_menu_info() {
             'label'    		=> esc_html__( 'Header Logo', 'foodhut' ),
 			'description' 	=> esc_html__( 'The saved photo will be your logo', 'foodhut' ),
             'section'  		=> 'foodhut_menu_info',
-            'default'  		=> get_template_directory_uri() . '/assets/images/logo.png',
+            'default'  		=> get_template_directory_uri() . '/assets/imgs/logo.svg',
 			'priority'    	=> 10,
         ]
     );
 
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'Foodhut_menu_cta_switch',
+            'label'       => esc_html__( 'Others', 'foodhut' ),
+            'section'     => 'foodhut_menu_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__( 'Show', 'foodhut' ),
+                'off' => esc_html__( 'Hide', 'foodhut' ),
+            ],
+        ]
+    );
+    
     new \Kirki\Field\Text(
         [
-            'settings' => 'Foodhut_top_bar_email',
-            'label'    => esc_html__( 'Email', 'Foodhut' ),
+            'settings' => 'Foodhut_menu_cta',
+            'label'    => esc_html__( 'CTA Button Text', 'Foodhut' ),
             'section'  => 'foodhut_menu_info',
-            'default'  => esc_html__( 'hello@Foodhut.com', 'Foodhut' ),
+            'default'  => esc_html__( 'Components', 'Foodhut' ),
             'priority' => 10,
         ]
     );
 
 	new \Kirki\Field\URL(
 		[
-			'settings' => 'foodhut_top_bar_facebook_url',
-			'label'    => esc_html__( 'Facebook URL', 'foodhut' ),
+			'settings' => 'Foodhut_menu_cta_url',
+			'label'    => esc_html__( 'CTA Button URL', 'foodhut' ),
 			'section'  => 'foodhut_menu_info',
 			'default'  => '#',
 			'priority' => 10,
