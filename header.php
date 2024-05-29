@@ -1,14 +1,14 @@
 <?php
 /**
- * The header of the Constra theme.
+ * The header of the Foodhut theme.
  *
- * This file serves as the header template for Constra WordPress theme.
+ * This file serves as the header template for Foodhut WordPress theme.
  * It contains the opening HTML document structure, <head> section, and
  * the beginning of the <body> section.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Constra
+ * @package Foodhut
  * @subpackage Template
  * @since 1.0.0
  */

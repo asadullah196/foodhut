@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package constra
+ * @package Foodhut
  * @since 1.0.0
  */
 
