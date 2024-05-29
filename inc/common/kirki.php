@@ -152,3 +152,81 @@ function foodhut_footer_section() {
 
 }
 foodhut_footer_section();
+
+// Foodhut 404 error page
+function foodhut_error_page() {
+    new \Kirki\Section(
+        'foodhut_error_page',
+        [
+            'title'       => esc_html__( '404 Page', 'foodhut' ),
+            'description' => esc_html__( 'Error page options', 'foodhut' ),
+            'panel'       => 'foodhut_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'foodhut_error_page_bg_switch',
+            'label'       => esc_html__( 'Error page background', 'foodhut' ),
+            'section'     => 'foodhut_error_page',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__( 'Show', 'foodhut' ),
+                'off' => esc_html__( 'Hide', 'foodhut' ),
+            ],
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' 		=> 'foodhut_error_page_bg',
+            'label'    		=> esc_html__( 'Error page background image', 'foodhut' ),
+			'description' 	=> esc_html__( 'The saved photo will be error page background', 'foodhut' ),
+            'section'  		=> 'foodhut_error_page',
+            'default'  		=> get_template_directory_uri() . '/assets/imgs/main.jpg',
+			'priority'    	=> 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_error_page_heading',
+            'label'    => esc_html__( 'Error Heading', 'foodhut' ),
+            'section'  => 'foodhut_error_page',
+            'default'  => esc_html__( '404', 'foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_error_page_sub_heading',
+            'label'    => esc_html__( 'Error Sub Heading', 'foodhut' ),
+            'section'  => 'foodhut_error_page',
+            'default'  => esc_html__( 'Ops... We did not found your search!', 'foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_error_page_btn_text',
+            'label'    => esc_html__( 'Error Heading', 'foodhut' ),
+            'section'  => 'foodhut_error_page',
+            'default'  => esc_html__( 'Back to Home Page', 'foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+	new \Kirki\Field\URL(
+		[
+			'settings' => 'foodhut_error_page_btn_url',
+			'label'    => esc_html__( 'Error Page Button URL', 'foodhut' ),
+			'section'  => 'foodhut_error_page',
+			'default'  => get_template_directory_uri().'/assets/imgs/main.jpg',
+			'priority' => 10,
+		]
+	);
+}
+foodhut_error_page();
