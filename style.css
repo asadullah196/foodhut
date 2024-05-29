@@ -13,3 +13,10 @@
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
     Text Domain: foodhut
 */
+
+/*Added extra css for header CTA button */
+.header-cta li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+}
