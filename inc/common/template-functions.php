@@ -23,3 +23,19 @@ function foodhut_header_logo(){
         </a>
 	<?php endif;	
 }
+
+// Foodhut primary menu
+function foodhut_primary_left_menus(){
+    wp_nav_menu( 
+        array( 
+            'theme_location'  => 'primary-menu',
+			'container_class' => 'collapse navbar-collapse', // div class, make it false to avoid div generation
+			'container_id'    => 'navbar-collapse', // div id
+            'menu_class'      => 'nav navbar-nav mr-auto', // Ul class
+            'menu_id'         => '', // ul id
+            'fallback_cb'     => 'Foodhut_Walker_Nav_Menu::fallback',
+            'walker'     	  => new Foodhut_Walker_Nav_Menu,
+			'depth'           => 4,
+        ) 
+    ); 
+}

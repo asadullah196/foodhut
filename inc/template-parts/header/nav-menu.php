@@ -11,6 +11,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <?php /*
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#home">Home</a>
@@ -25,7 +27,8 @@
                 <a class="nav-link" href="#book-table">Book-Table</a>
             </li>
         </ul>
-
+    */ ?>
+    
         <?php foodhut_header_logo(); ?>
 
         <ul class="navbar-nav">

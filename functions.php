@@ -33,7 +33,8 @@ function foodhut_theme_support(){
 
     // Foodhut all the menu
     register_nav_menus( array(
-        'primary-menu' => __( 'Primary Menu', 'foodhut' ),
+        'primary-left-menu' => __( 'Primary Left Menu', 'foodhut' ),
+        'primary-right-menu' => __( 'Primary Right Menu', 'foodhut' ),
         'social-menu' => __( 'Social Menu', 'foodhut' ),
     ) );
 
@@ -57,4 +58,5 @@ if( class_exists ( 'Kirki' ) ){
 	include_once('inc/common/kirki.php');
 }
 include_once('inc/common/scripts.php');
+include_once('inc/common/nav-walker.php');
 include_once('inc/common/template-functions.php');
