@@ -159,7 +159,7 @@ function foodhut_blog_archive_page() {
         'foodhut_blog_archive_page',
         [
             'title'       => esc_html__( 'Blog Archive', 'foodhut' ),
-            'description' => esc_html__( 'Error page options', 'foodhut' ),
+            'description' => esc_html__( 'Blog listing page options', 'foodhut' ),
             'panel'       => 'foodhut_theme_options',
             'priority'    => 160,
         ]

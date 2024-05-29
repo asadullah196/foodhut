@@ -78,8 +78,8 @@ function foodhut_copyright(){
 function foodhut_navigation(){
     $pages = paginate_links( array( 
         'type' => 'array',
-        'prev_text'    => __('<i class="fas fa-angle-double-left"></i> Prev'),
-        'next_text'    => __('Next <i class="fas fa-angle-double-right"></i>'),
+        'prev_text'    => __('Prev'),
+        'next_text'    => __('Next'),
     ) );
         if( $pages ) {
         echo '<div class="paging" aria-label="Page navigation example"><ul class="pagination">';

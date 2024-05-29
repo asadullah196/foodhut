@@ -13,15 +13,21 @@
  * @since 1.0.0
  */
 
-// Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+    // Exit if accessed directly.
+    defined( 'ABSPATH' ) || exit;
+
+    
+    $blog_archive_heading = get_theme_mod('foodhut_blog_archive_page_heading', 'Events At The Food Hut');
+
 ?>
 
 <?php get_header(); ?>
 
     <!-- BLOG Section  -->
     <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
-        <h2 class="section-title py-5">EVENTS AT THE FOOD HUT</h2>
+        <?php if(!empty($blog_archive_heading)) : ?>
+            <h2 class="section-title py-5"><?php echo esc_html__($blog_archive_heading,'constra'); ?></h2>
+        <?php endif; ?>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="row">
@@ -35,9 +41,9 @@ defined( 'ABSPATH' ) || exit;
                     
                 </div>
                 <br/>
-                    <!-- Blog pagination starts -->
-                    <?php foodhut_navigation(); ?>
-                    <!-- Blog pagination ends -->
+                <!-- Blog pagination starts -->
+                <?php foodhut_navigation(); ?>
+                <!-- Blog pagination ends -->
             </div>
         </div>
     </div>
