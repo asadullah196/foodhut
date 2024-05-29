@@ -174,6 +174,20 @@ function foodhut_blog_archive_page() {
             'priority' => 10,
         ]
     );
+
+    new \Kirki\Field\Number(
+        [
+            'settings' => 'foodhut_blog_single_description_words',
+            'label'    => esc_html__( 'Display words', 'foodhut' ),
+            'section'  => 'foodhut_blog_archive_page',
+            'default'  => 40,
+            'choices'  => [
+                'min'  => 10,
+                'max'  => 150,
+                'step' => 5,
+            ],
+        ]
+    );
 }
 foodhut_blog_archive_page();
 

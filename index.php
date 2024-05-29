@@ -16,7 +16,7 @@
     // Exit if accessed directly.
     defined( 'ABSPATH' ) || exit;
 
-    
+    // Getting value from kirki
     $blog_archive_heading = get_theme_mod('foodhut_blog_archive_page_heading', 'Events At The Food Hut');
 
 ?>
