@@ -19,6 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 <?php get_header(); ?>
 
+    <?php get_template_part( 'inc/template-parts/header/header-1' ); ?>
+
     <!--  About Section  -->
     <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
         <div class="row">
