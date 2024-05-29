@@ -67,3 +67,88 @@ function foodhut_menu_info() {
 	);
 }
 foodhut_menu_info();
+
+// Foodhut footer section
+function foodhut_footer_section() {
+    new \Kirki\Section(
+        'foodhut_footer_section',
+        [
+            'title'       => esc_html__( 'Footer Section', 'Foodhut' ),
+            'description' => esc_html__( 'Menu update options', 'Foodhut' ),
+            'panel'       => 'foodhut_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_email_heading',
+            'label'    => esc_html__( 'Email Heading', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( 'Email Us', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_email_address',
+            'label'    => esc_html__( 'Email Address', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( 'info@website.com', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_phone_heading',
+            'label'    => esc_html__( 'Call Heading', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( 'Components', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_phone_number',
+            'label'    => esc_html__( 'Call Number', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( '(123) 456-7890', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_address_heading',
+            'label'    => esc_html__( 'Address Heading', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( 'Find Us', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_address_text',
+            'label'    => esc_html__( 'Address Text', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( '12345 Fake ST NoWhere AB Country', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_footer_copyright_text',
+            'label'    => esc_html__( 'Footer Copyright Text', 'Foodhut' ),
+            'section'  => 'foodhut_footer_section',
+            'default'  => esc_html__( '© Copyright 2024 Made with  By DevCRUD', 'Foodhut' ),
+            'priority' => 10,
+        ]
+    );
+
+}
+foodhut_footer_section();
