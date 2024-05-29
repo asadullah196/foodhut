@@ -24,18 +24,32 @@ function foodhut_header_logo(){
 	<?php endif;	
 }
 
-// Foodhut primary menu
+// Foodhut primary left menu
 function foodhut_primary_left_menus(){
     wp_nav_menu( 
         array( 
-            'theme_location'  => 'primary-menu',
-			'container_class' => 'collapse navbar-collapse', // div class, make it false to avoid div generation
-			'container_id'    => 'navbar-collapse', // div id
-            'menu_class'      => 'nav navbar-nav mr-auto', // Ul class
+            'theme_location'  => 'primary-left-menu',
+			'container' => false, // div class, make it false to avoid div generation
+            'menu_class'      => 'navbar-nav', // Ul class
             'menu_id'         => '', // ul id
             'fallback_cb'     => 'Foodhut_Walker_Nav_Menu::fallback',
             'walker'     	  => new Foodhut_Walker_Nav_Menu,
-			'depth'           => 4,
+			'depth'           => 3,
+        ) 
+    ); 
+}
+
+// Foodhut primary menu
+function foodhut_primary_right_menus(){
+    wp_nav_menu( 
+        array( 
+            'theme_location'  => 'primary-left-menu',
+			'container' => false, // div class, make it false to avoid div generation
+            'menu_class'      => 'navbar-nav', // Ul class
+            'menu_id'         => '', // ul id
+            'fallback_cb'     => 'Foodhut_Walker_Nav_Menu::fallback',
+            'walker'     	  => new Foodhut_Walker_Nav_Menu,
+			'depth'           => 3,
         ) 
     ); 
 }

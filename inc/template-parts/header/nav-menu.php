@@ -11,7 +11,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+        <?php foodhut_primary_left_menus(); ?>
     <?php /*
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -28,7 +28,7 @@
             </li>
         </ul>
     */ ?>
-    
+
         <?php foodhut_header_logo(); ?>
 
         <ul class="navbar-nav">
@@ -42,6 +42,8 @@
                 <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
         </ul>
+
+        
     </div>
 
     <?php if($header_section_button_status == true) : ?>
