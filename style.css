@@ -20,3 +20,50 @@
     display: inline-block;
     margin: 0;
 }
+
+/* Added extra css for pagination */
+.paging {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Default background color */
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-numbers:hover {
+    background-color: #ED0031; /* Hover background color */
+    color: #fff; /* Hover text color */
+}
+
+.current {
+    background-color: #ED0031; /* Active page background color */
+    color: #fff; /* Active page text color */
+    pointer-events: none; /* Prevent clicking on the current page */
+}
+
+.next .fa-angle-double-right {
+    margin-left: 5px;
+}

@@ -73,3 +73,21 @@ function foodhut_copyright(){
         </div>
 	<?php endif;	
 }
+
+// Foodhut blog navigation 
+function foodhut_navigation(){
+    $pages = paginate_links( array( 
+        'type' => 'array',
+        'prev_text'    => __('<i class="fas fa-angle-double-left"></i> Prev'),
+        'next_text'    => __('Next <i class="fas fa-angle-double-right"></i>'),
+    ) );
+        if( $pages ) {
+        echo '<div class="paging" aria-label="Page navigation example"><ul class="pagination">';
+        foreach ( $pages as $page ) {
+            echo '<li class="page-item">' . $page . '</li>';
+        }
+        echo '</ul></div>';
+		
+    }
+}
+
