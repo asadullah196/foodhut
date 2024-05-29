@@ -12,25 +12,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php foodhut_primary_left_menus(); ?>
-    <?php /*
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="menu.html">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#book-table">Book-Table</a>
-            </li>
-        </ul>
-    */ ?>
-
         <?php foodhut_header_logo(); ?>
-
         <?php foodhut_primary_right_menus(); ?>
     </div>
 
