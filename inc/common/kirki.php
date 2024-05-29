@@ -153,6 +153,54 @@ function foodhut_footer_section() {
 }
 foodhut_footer_section();
 
+// Foodhut blog archive page
+function foodhut_blog_archive_page() {
+    new \Kirki\Section(
+        'foodhut_blog_archive_page',
+        [
+            'title'       => esc_html__( 'Blog Archive', 'foodhut' ),
+            'description' => esc_html__( 'Error page options', 'foodhut' ),
+            'panel'       => 'foodhut_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_blog_archive_page_heading',
+            'label'    => esc_html__( 'Blog Archive Page Heading', 'foodhut' ),
+            'section'  => 'foodhut_blog_archive_page',
+            'default'  => esc_html__( 'Events At The Food Hut', 'foodhut' ),
+            'priority' => 10,
+        ]
+    );
+}
+foodhut_blog_archive_page();
+
+// Foodhut blog single page
+function foodhut_blog_single_page() {
+    new \Kirki\Section(
+        'foodhut_blog_single_page',
+        [
+            'title'       => esc_html__( 'Blog Single', 'foodhut' ),
+            'description' => esc_html__( 'Error page options', 'foodhut' ),
+            'panel'       => 'foodhut_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'foodhut_blog_single_page_heading',
+            'label'    => esc_html__( 'Error Heading', 'foodhut' ),
+            'section'  => 'foodhut_blog_single_page',
+            'default'  => esc_html__( '404', 'foodhut' ),
+            'priority' => 10,
+        ]
+    );
+}
+foodhut_blog_single_page();
+
 // Foodhut 404 error page
 function foodhut_error_page() {
     new \Kirki\Section(
