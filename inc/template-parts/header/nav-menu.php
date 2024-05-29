@@ -40,10 +40,13 @@
             </li>
         </ul>
     </div>
+
+    <?php if($header_section_button_status == true) : ?>
     <div class="header-cta">
         <li class="nav-item">
-            <a href="components.html" class="btn btn-primary ml-xl-4">Components</a>
+            <a href="<?php echo esc_url($header_section_button_url); ?>" class="btn btn-primary ml-xl-4"><?php echo esc_html__($header_section_button_text,'constra'); ?></a>
         </li> 
     </div>
+    <?php endif; ?>
 </nav>
 <!-- header -->
