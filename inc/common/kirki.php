@@ -35,7 +35,7 @@ function foodhut_menu_info() {
 
     new \Kirki\Field\Checkbox_Switch(
         [
-            'settings'    => 'Foodhut_menu_cta_switch',
+            'settings'    => 'foodhut_menu_cta_switch',
             'label'       => esc_html__( 'Others', 'foodhut' ),
             'section'     => 'foodhut_menu_info',
             'default'     => 'on',
@@ -48,7 +48,7 @@ function foodhut_menu_info() {
     
     new \Kirki\Field\Text(
         [
-            'settings' => 'Foodhut_menu_cta',
+            'settings' => 'foodhut_menu_cta_text',
             'label'    => esc_html__( 'CTA Button Text', 'Foodhut' ),
             'section'  => 'foodhut_menu_info',
             'default'  => esc_html__( 'Components', 'Foodhut' ),
@@ -58,7 +58,7 @@ function foodhut_menu_info() {
 
 	new \Kirki\Field\URL(
 		[
-			'settings' => 'Foodhut_menu_cta_url',
+			'settings' => 'foodhut_menu_cta_url',
 			'label'    => esc_html__( 'CTA Button URL', 'foodhut' ),
 			'section'  => 'foodhut_menu_info',
 			'default'  => '#',

@@ -1,3 +1,10 @@
+<?php
+    // header section
+    $header_section_button_status = get_theme_mod('foodhut_menu_cta_switch', true);
+    $header_section_button_text = get_theme_mod('foodhut_menu_cta_text', 'Components');
+    $header_section_button_url = get_theme_mod('foodhut_menu_cta_url', '#');
+?>
+
 <!-- Navbar -->
 <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,10 +25,9 @@
                 <a class="nav-link" href="#book-table">Book-Table</a>
             </li>
         </ul>
-        <a class="navbar-brand m-auto" href="index.html">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo.svg" class="brand-img" alt="">
-            <span class="brand-txt">Food Hut</span>
-        </a>
+
+        <?php foodhut_header_logo(); ?>
+
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="blog.html">Blog<span class="sr-only">(current)</span></a>
