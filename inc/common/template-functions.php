@@ -43,7 +43,7 @@ function foodhut_primary_left_menus(){
 function foodhut_primary_right_menus(){
     wp_nav_menu( 
         array( 
-            'theme_location'  => 'primary-left-menu',
+            'theme_location'  => 'primary-right-menu',
 			'container' => false, // div class, make it false to avoid div generation
             'menu_class'      => 'navbar-nav', // Ul class
             'menu_id'         => '', // ul id

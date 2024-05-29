@@ -31,19 +31,7 @@
 
         <?php foodhut_header_logo(); ?>
 
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#testmonial">Reviews</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-        </ul>
-
-        
+        <?php foodhut_primary_right_menus(); ?>
     </div>
 
     <?php if($header_section_button_status == true) : ?>
