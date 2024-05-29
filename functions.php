@@ -53,5 +53,8 @@ function foodhut_theme_support(){
 add_action('after_setup_theme','foodhut_theme_support');
 
 // All the theme script calling
+if( class_exists ( 'Kirki' ) ){
+	include_once('inc/common/kirki.php');
+}
 include_once('inc/common/scripts.php');
 include_once('inc/common/template-functions.php');
