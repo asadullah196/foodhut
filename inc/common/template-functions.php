@@ -4,7 +4,13 @@
 
 // Header template calling
 function foodhut_header(){
+    get_template_part( 'inc/template-parts/header/nav-menu' );
     get_template_part( 'inc/template-parts/header/header-1' );
+}
+
+// Header template calling
+function foodhut_footer(){
+    get_template_part( 'inc/template-parts/footer/footer-1' );
 }
 
 // Foodhut header section logo
@@ -52,4 +58,19 @@ function foodhut_primary_right_menus(){
 			'depth'           => 3,
         ) 
     ); 
+}
+
+// Foodhut copyright
+function foodhut_copyright(){
+    $copyright_text = get_theme_mod('foodhut_footer_copyright_text','© Copyright 2024 Made with  By DevCRUD');
+
+    if( !empty($copyright_text) ) : ?>
+        <div class="bg-dark text-light text-center border-top wow fadeIn">
+            <p class="mb-0 py-3 text-muted small"><?php echo wp_kses_post($copyright_text); ?></p>
+        </div>
+	<?php else : ?>
+        <div class="bg-dark text-light text-center border-top wow fadeIn">
+            <p class="mb-0 py-3 text-muted small">&copy; Copyright 2024 Made with <i class="ti-heart text-danger"></i> By <a href="#">DevCRUD</a></p>
+        </div>
+	<?php endif;	
 }

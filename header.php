@@ -32,5 +32,4 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" <?php body_class(); ?>> 
-    <?php get_template_part( 'inc/template-parts/header/nav-menu' ); ?>
     <?php foodhut_header(); ?>

@@ -5,8 +5,8 @@ new \Kirki\Panel(
     'foodhut_theme_options',
     [
         'priority'      => 10,
-        'title'         => esc_html__( 'Theme Options', 'Foodhut' ),
-        'description'   => esc_html__( 'Foodhut Options Panel', 'Foodhut' ),
+        'title'         => esc_html__( 'Theme Options', 'foodhut' ),
+        'description'   => esc_html__( 'Foodhut Options Panel', 'foodhut' ),
     ]
 );
 
@@ -15,8 +15,8 @@ function foodhut_menu_info() {
     new \Kirki\Section(
         'foodhut_menu_info',
         [
-            'title'       => esc_html__( 'Top Menu', 'Foodhut' ),
-            'description' => esc_html__( 'Menu update options', 'Foodhut' ),
+            'title'       => esc_html__( 'Top Menu', 'foodhut' ),
+            'description' => esc_html__( 'Menu update options', 'foodhut' ),
             'panel'       => 'foodhut_theme_options',
             'priority'    => 160,
         ]
@@ -49,9 +49,9 @@ function foodhut_menu_info() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_menu_cta_text',
-            'label'    => esc_html__( 'CTA Button Text', 'Foodhut' ),
+            'label'    => esc_html__( 'CTA Button Text', 'foodhut' ),
             'section'  => 'foodhut_menu_info',
-            'default'  => esc_html__( 'Components', 'Foodhut' ),
+            'default'  => esc_html__( 'Components', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -73,8 +73,8 @@ function foodhut_footer_section() {
     new \Kirki\Section(
         'foodhut_footer_section',
         [
-            'title'       => esc_html__( 'Footer Section', 'Foodhut' ),
-            'description' => esc_html__( 'Menu update options', 'Foodhut' ),
+            'title'       => esc_html__( 'Footer Section', 'foodhut' ),
+            'description' => esc_html__( 'Menu update options', 'foodhut' ),
             'panel'       => 'foodhut_theme_options',
             'priority'    => 160,
         ]
@@ -83,9 +83,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_email_heading',
-            'label'    => esc_html__( 'Email Heading', 'Foodhut' ),
+            'label'    => esc_html__( 'Email Heading', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( 'Email Us', 'Foodhut' ),
+            'default'  => esc_html__( 'Email Us', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -93,9 +93,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_email_address',
-            'label'    => esc_html__( 'Email Address', 'Foodhut' ),
+            'label'    => esc_html__( 'Email Address', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( 'info@website.com', 'Foodhut' ),
+            'default'  => esc_html__( 'info@website.com', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -103,9 +103,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_phone_heading',
-            'label'    => esc_html__( 'Call Heading', 'Foodhut' ),
+            'label'    => esc_html__( 'Call Heading', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( 'Components', 'Foodhut' ),
+            'default'  => esc_html__( 'Components', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -113,9 +113,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_phone_number',
-            'label'    => esc_html__( 'Call Number', 'Foodhut' ),
+            'label'    => esc_html__( 'Call Number', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( '(123) 456-7890', 'Foodhut' ),
+            'default'  => esc_html__( '(123) 456-7890', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -123,9 +123,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_address_heading',
-            'label'    => esc_html__( 'Address Heading', 'Foodhut' ),
+            'label'    => esc_html__( 'Address Heading', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( 'Find Us', 'Foodhut' ),
+            'default'  => esc_html__( 'Find Us', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -133,9 +133,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_address_text',
-            'label'    => esc_html__( 'Address Text', 'Foodhut' ),
+            'label'    => esc_html__( 'Address Text', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( '12345 Fake ST NoWhere AB Country', 'Foodhut' ),
+            'default'  => esc_html__( '12345 Fake ST NoWhere AB Country', 'foodhut' ),
             'priority' => 10,
         ]
     );
@@ -143,9 +143,9 @@ function foodhut_footer_section() {
     new \Kirki\Field\Text(
         [
             'settings' => 'foodhut_footer_copyright_text',
-            'label'    => esc_html__( 'Footer Copyright Text', 'Foodhut' ),
+            'label'    => esc_html__( 'Footer Copyright Text', 'foodhut' ),
             'section'  => 'foodhut_footer_section',
-            'default'  => esc_html__( '© Copyright 2024 Made with  By DevCRUD', 'Foodhut' ),
+            'default'  => esc_html__( '© Copyright 2024 Made with  By DevCRUD', 'foodhut' ),
             'priority' => 10,
         ]
     );
