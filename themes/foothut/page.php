@@ -22,7 +22,7 @@
 <?php get_header(); ?>
 
     <!-- Single page section  -->
-    <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+    <div id="blog" class="container-fluid bg-dark text-light text-center wow fadeIn">
         <h2 class="section-title py-5"><?php the_title(); ?></h2>
         <?php if ( has_post_thumbnail() ) : ?>
             <div class="page-thumbnail">

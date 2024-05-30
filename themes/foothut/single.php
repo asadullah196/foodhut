@@ -16,9 +16,6 @@
 
     <!-- BLOG Section  -->
     <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
-        <?php if(!empty($blog_archive_heading)) : ?>
-            <h2 class="section-title py-5"><?php echo esc_html__($blog_archive_heading,'constra'); ?></h2>
-        <?php endif; ?>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="row">
