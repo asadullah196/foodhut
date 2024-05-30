@@ -8,7 +8,8 @@
 
 <?php if(is_single()) :  ?>
     <!-- Single post starts -->
-    <div class="col-md-4 my-3 my-md-0">
+    <div class="col-12 col-sm-4 col-md-3 col-xl-3"></div>
+    <div class="col-12 col-sm-4 col-md-6 col-xl-6">
         <a href="#"class="card bg-transparent border">
             <?php if(has_post_thumbnail()) : ?>
                 <img src="<?php echo esc_url(the_post_thumbnail_url()); ?>" alt="Blog Thumbnail" class="rounded-0 card-img-top mg-responsive">
@@ -29,6 +30,7 @@
             </div>
         </a>
     </div>
+    <div class="col-12 col-sm-4 col-md-3 col-xl-3"></div>
     <!-- Single post ends -->
 <?php else : ?>
     <!-- archive post starts -->
