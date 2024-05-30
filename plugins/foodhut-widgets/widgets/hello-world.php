@@ -154,22 +154,6 @@ class Hello_World extends Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-
-		echo '<div class="title">';
-		echo $settings['title'];
-		echo '</div>';
-	}
-
-	/**
-	 * Render the widget output in the editor.
-	 *
-	 * Written as a Backbone JavaScript template and used to generate the live preview.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @access protected
-	 */
-	protected function content_template() {
 		?>
 
 		<!-- header -->
