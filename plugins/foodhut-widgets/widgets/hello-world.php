@@ -157,7 +157,7 @@ class Hello_World extends Widget_Base {
 		?>
 
 		<!-- header -->
-		<header id="home" class="header">
+		<header id="home" class="header" style="background-image: url('<?php echo get_template_directory_uri().'/assets/imgs/main.jpg'; ?>'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; background-color: #1f1f1f;">
 			<div class="overlay text-white text-center">
 				<h1 class="display-2 font-weight-bold my-3">Food Hut</h1>
 				<h2 class="display-4 mb-5">Always fresh &amp; Delightful</h2>
