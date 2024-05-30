@@ -51,6 +51,18 @@ class Foodhut_Wigets_Plugin {
 		wp_register_script( 'food-hut-widgets', plugins_url( '/assets/js/hello-world.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 
+	/** Register new category */
+	public function foodhut_add_widget_categories( $foodhut_add_category ) {
+
+		$foodhut_add_category->add_category(
+			'foodhut-category',
+			[
+				'title' => esc_html__( 'Foodhut Widgets', 'food-hut-widgets' ),
+				'icon' => 'fa fa-plug',
+			]
+		);
+	}
+
 	/**
 	 * Editor scripts
 	 *
@@ -139,6 +151,9 @@ class Foodhut_Wigets_Plugin {
 
 		// Register widgets
 		add_action( 'elementor/widgets/register', [ $this, 'register_widgets' ] );
+
+		// Register category
+		add_action( 'elementor/elements/categories_registered', [ $this, 'foodhut_add_widget_categories'] );
 
 		// Register editor scripts
 		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'editor_scripts' ] );

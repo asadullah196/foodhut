@@ -51,7 +51,7 @@ class Hello_World extends Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-posts-ticker';
+		return 'eicon-instagram-nested-gallery';
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Hello_World extends Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return [ 'general' ];
+		return [ 'foodhut-category' ];
 	}
 
 	/**
@@ -171,9 +171,16 @@ class Hello_World extends Widget_Base {
 	 */
 	protected function content_template() {
 		?>
-		<div class="title">
-			{{{ settings.title }}}
-		</div>
+
+		<!-- header -->
+		<header id="home" class="header">
+			<div class="overlay text-white text-center">
+				<h1 class="display-2 font-weight-bold my-3">Food Hut</h1>
+				<h2 class="display-4 mb-5">Always fresh &amp; Delightful</h2>
+				<a class="btn btn-lg btn-primary" href="#gallary">View Our gallary</a>
+			</div>
+		</header>
+
 		<?php
 	}
 }
