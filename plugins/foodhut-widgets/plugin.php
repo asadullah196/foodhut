@@ -1,7 +1,7 @@
 <?php
-namespace ElementorHelloWorld;
+namespace FoodhutWidgets;
 
-use ElementorHelloWorld\PageSettings\Page_Settings;
+use FoodhutWidgets\PageSettings\Page_Settings;
 
 /**
  * Class Plugin
@@ -9,7 +9,7 @@ use ElementorHelloWorld\PageSettings\Page_Settings;
  * Main Plugin class
  * @since 1.2.0
  */
-class Plugin {
+class Foodhut_Wigets_Plugin {
 
 	/**
 	 * Instance
@@ -148,4 +148,4 @@ class Plugin {
 }
 
 // Instantiate Plugin Class
-Plugin::instance();
+Foodhut_Wigets_Plugin::instance();
