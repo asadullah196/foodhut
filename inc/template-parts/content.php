@@ -1,5 +1,4 @@
 <?php
-    
     // Getting value from kirki
     $display_blog_description = get_theme_mod('foodhut_blog_single_description_words', 25 );
 
