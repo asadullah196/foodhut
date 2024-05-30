@@ -11289,7 +11289,7 @@ pre {
   margin-top: 150px;
 }
 #blog{
-  margin-top: 150px;
+  margin-top: 0;
 }
 .tab-pane .row {
   row-gap: 80px;
