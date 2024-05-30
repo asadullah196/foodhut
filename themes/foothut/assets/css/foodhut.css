@@ -11115,6 +11115,9 @@ pre {
 
 .custom-navbar {
   min-height: 140px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 @media (max-width: 1199.98px) {
@@ -11290,7 +11293,7 @@ pre {
   margin-top: 150px;
 }
 #blog{
-  margin-top: 150px;
+  padding-top: 150px !important;
 }
 .tab-pane .row {
   row-gap: 80px;
