@@ -11016,6 +11016,7 @@ table, tr, td, th {
 .card {
   border-color: #495057;
   overflow: hidden;
+  background: transparent;
 }
 
 .testmonial-card {
