@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Any custom code should go inside Plugin Class in the plugin.php file.
  * @since 1.2.0
  */
-final class Elementor_Hello_World {
+final class Foodhut_Elementor_Widgets {
 
 	/**
 	 * Plugin Version
@@ -170,5 +170,5 @@ final class Elementor_Hello_World {
 	}
 }
 
-// Instantiate Elementor_Hello_World.
-new Elementor_Hello_World();
+// Instantiate Foodhut_Elementor_Widgets.
+new Foodhut_Elementor_Widgets();

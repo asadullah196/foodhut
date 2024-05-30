@@ -38,7 +38,7 @@ class Hello_World extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Hello World', 'elementor-hello-world' );
+		return __( 'Hello World', 'food-hut-widgets' );
 	}
 
 	/**
@@ -84,7 +84,7 @@ class Hello_World extends Widget_Base {
 	 * @return array Widget scripts dependencies.
 	 */
 	public function get_script_depends() {
-		return [ 'elementor-hello-world' ];
+		return [ 'food-hut-widgets' ];
 	}
 
 	/**
@@ -100,14 +100,14 @@ class Hello_World extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Content', 'elementor-hello-world' ),
+				'label' => __( 'Content', 'food-hut-widgets' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'elementor-hello-world' ),
+				'label' => __( 'Title', 'food-hut-widgets' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);
@@ -117,7 +117,7 @@ class Hello_World extends Widget_Base {
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => __( 'Style', 'elementor-hello-world' ),
+				'label' => __( 'Style', 'food-hut-widgets' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -125,14 +125,14 @@ class Hello_World extends Widget_Base {
 		$this->add_control(
 			'text_transform',
 			[
-				'label' => __( 'Text Transform', 'elementor-hello-world' ),
+				'label' => __( 'Text Transform', 'food-hut-widgets' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'None', 'elementor-hello-world' ),
-					'uppercase' => __( 'UPPERCASE', 'elementor-hello-world' ),
-					'lowercase' => __( 'lowercase', 'elementor-hello-world' ),
-					'capitalize' => __( 'Capitalize', 'elementor-hello-world' ),
+					'' => __( 'None', 'food-hut-widgets' ),
+					'uppercase' => __( 'UPPERCASE', 'food-hut-widgets' ),
+					'lowercase' => __( 'lowercase', 'food-hut-widgets' ),
+					'capitalize' => __( 'Capitalize', 'food-hut-widgets' ),
 				],
 				'selectors' => [
 					'{{WRAPPER}} .title' => 'text-transform: {{VALUE}};',
