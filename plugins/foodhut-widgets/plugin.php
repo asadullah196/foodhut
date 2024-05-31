@@ -120,7 +120,7 @@ class Foodhut_Wigets_Plugin {
 
 		// Register Widgets
 		$widgets_manager->register( new Widgets\Foodhut_Main_Hero() );
-		$widgets_manager->register( new Widgets\Foodhut_Main_Hero() );
+		$widgets_manager->register( new Widgets\Foodhut_Main_About() );
 	}
 
 	/**
