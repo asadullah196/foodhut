@@ -159,21 +159,7 @@ class Foodhut_Contact_Us extends Widget_Base {
     <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
         <div class="">
             <h2 class="section-title mb-5"><?php echo esc_html($settings['foodhut_main_title']); ?></h2>
-            <form class="row mb-5" action="#">
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="name" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Your Name">
-                </div>
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
-                </div>
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="tel" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Phone">
-                </div>
-                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="NUMBER OF GUESTS" max="20" min="0">
-                </div>
-            </form>
-            <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">BOOk A TABLE</a>
+			<?php echo do_shortcode('[contact-form-7 id="91ebf4b" title="Foodhut-contact"]'); ?>
         </div>
     </div>
 
