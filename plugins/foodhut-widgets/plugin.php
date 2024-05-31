@@ -117,10 +117,12 @@ class Foodhut_Wigets_Plugin {
 		// Its is now safe to include Widgets files
 		require_once( __DIR__ . '/widgets/main-hero.php' );
 		require_once( __DIR__ . '/widgets/main-about.php' );
+		require_once( __DIR__ . '/widgets/find-us.php' );
 
 		// Register Widgets
 		$widgets_manager->register( new Widgets\Foodhut_Main_Hero() );
 		$widgets_manager->register( new Widgets\Foodhut_Main_About() );
+		$widgets_manager->register( new Widgets\Foodhut_Find_Us() );
 	}
 
 	/**
