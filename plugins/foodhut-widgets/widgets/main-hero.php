@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @since 1.0.0
  */
-class Hello_World extends Widget_Base {
+class Foodhut_Main_Hero extends Widget_Base {
 
 	/**
 	 * Retrieve the widget name.
@@ -25,7 +25,7 @@ class Hello_World extends Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'foodhut-hero';
+		return 'foodhut-main-hero';
 	}
 
 	/**
@@ -38,7 +38,7 @@ class Hello_World extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Foodhut Hero', 'food-hut-widgets' );
+		return __( 'Main Hero', 'food-hut-widgets' );
 	}
 
 	/**
@@ -97,25 +97,9 @@ class Hello_World extends Widget_Base {
 	 * @access protected
 	 */
 	protected function register_controls() {
-		$this->start_controls_section(
-			'section_content',
-			[
-				'label' => __( 'Content', 'food-hut-widgets' ),
-			]
-		);
-
-		$this->add_control(
-			'title',
-			[
-				'label' => __( 'Title', 'food-hut-widgets' ),
-				'type' => Controls_Manager::TEXT,
-			]
-		);
-
-		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style',
+			'foodhut_main_hero_style',
 			[
 				'label' => __( 'Style', 'food-hut-widgets' ),
 				'tab' => Controls_Manager::TAB_STYLE,
@@ -123,20 +107,59 @@ class Hello_World extends Widget_Base {
 		);
 
 		$this->add_control(
-			'text_transform',
+			'foodhut_main_hero_bg',
 			[
-				'label' => __( 'Text Transform', 'food-hut-widgets' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '',
-				'options' => [
-					'' => __( 'None', 'food-hut-widgets' ),
-					'uppercase' => __( 'UPPERCASE', 'food-hut-widgets' ),
-					'lowercase' => __( 'lowercase', 'food-hut-widgets' ),
-					'capitalize' => __( 'Capitalize', 'food-hut-widgets' ),
+				'label' => esc_html__( 'Choose Background Image', 'food-hut-widgets' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
-				'selectors' => [
-					'{{WRAPPER}} .title' => 'text-transform: {{VALUE}};',
+			]
+		);
+
+		$this->add_control(
+			'foodhut_main_hero_title',
+			[
+				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
+			]
+		);
+
+		$this->add_control(
+			'foodhut_main_hero_sub_title',
+			[
+				'label' => esc_html__( 'Sub Title', 'food-hut-widgets' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Always Fresh and Delightful', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your sub title here', 'food-hut-widgets' ),
+			]
+		);
+
+		$this->add_control(
+			'foodhut_main_hero_btn_text',
+			[
+				'label' => esc_html__( 'Button Text', 'food-hut-widgets' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'View Our Gallery', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Add button text here', 'food-hut-widgets' ),
+			]
+		);
+
+		$this->add_control(
+			'foodhut_main_hero_btn_url',
+			[
+				'label' => esc_html__( 'Link', 'food-hut-widgets' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'options' => [ 'url', 'is_external', 'nofollow' ],
+				'default' => [
+					'url' => '',
+					'is_external' => true,
+					'nofollow' => true,
+					// 'custom_attributes' => '',
 				],
+				'label_block' => true,
 			]
 		);
 
