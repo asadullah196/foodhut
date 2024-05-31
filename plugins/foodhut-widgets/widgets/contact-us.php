@@ -134,8 +134,8 @@ class Foodhut_Contact_Us extends Widget_Base {
 				'label' => esc_html__( 'Short Code', 'food-hut-widgets' ),
 				'label_block' => true,
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '(123) 456-7890', 'food-hut-widgets' ),
-				'placeholder' => esc_html__( 'Type your short code here', 'food-hut-widgets' ),
+				'default' => esc_html__( '#', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Add your short code here', 'food-hut-widgets' ),
 			]
 		);
 
@@ -156,10 +156,12 @@ class Foodhut_Contact_Us extends Widget_Base {
 		?>
 
     <!-- book a table Section  -->
-    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+    <div class="container-fluid text-center text-light has-height-lg middle-items" id="book-table" style="background-image: url('<?php echo esc_url($settings['foodhut_bg']['url']); ?>'); background-repeat: no-repeat; background-position: center; opacity: .9; background-size: cover; position: relative; background-color: #1f1f1f;">
         <div class="">
             <h2 class="section-title mb-5"><?php echo esc_html($settings['foodhut_main_title']); ?></h2>
-			<?php echo do_shortcode('[contact-form-7 id="91ebf4b" title="Foodhut-contact"]'); ?>
+		<?php if (!empty ($settings['foodhut_short_code']) ) : ?>
+			<?php echo do_shortcode($settings['foodhut_short_code']); ?>
+		<?php endif; ?>
         </div>
     </div>
 
