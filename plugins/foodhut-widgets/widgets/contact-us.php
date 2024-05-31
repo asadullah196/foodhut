@@ -107,7 +107,29 @@ class Foodhut_Contact_Us extends Widget_Base {
 		);
 
 		$this->add_control(
-			'foodhut_phone',
+			'foodhut_bg',
+			[
+				'label' => esc_html__( 'Choose Background Image', 'food-hut-widgets' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
+		$this->add_control(
+			'foodhut_main_title',
+			[
+				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'label_block' => true,
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Book A Table', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
+			]
+		);
+
+		$this->add_control(
+			'foodhut_short_code',
 			[
 				'label' => esc_html__( 'Short Code', 'food-hut-widgets' ),
 				'label_block' => true,
@@ -133,42 +155,27 @@ class Foodhut_Contact_Us extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		?>
 
-		<!-- CONTACT Bottom Section  -->
-		<div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
-			<div class="row">
-				<div class="col-md-6 px-0">
-					<div id="map" style="width: 100%; height: 100%; min-height: 400px"></div>
-				</div>
-				<div class="col-md-6 px-5 has-height-lg middle-items">
-					<h3>FIND US</h3>
-					<p>
-						<?php
-							// Check if Elementor is in edit mode
-							$is_edit_mode = \Elementor\Plugin::$instance->editor->is_edit_mode();
-
-							if ( $is_edit_mode ) {
-								// Output the content with tags in the backend (editor)
-								echo wp_kses_post( $settings['foodhut_description'] );
-							} else {
-								// Output the content without tags in the frontend
-								echo esc_html( wp_strip_all_tags( $settings['foodhut_description'] ) );
-							}
-						?>
-					</p>
-					<div class="text-muted">
-						<?php if (!empty ($settings['foodhut_address']) ) : ?>
-							<p><span class="ti-location-pin pr-3"></span> <?php echo esc_html($settings['foodhut_address']); ?></p>
-						<?php endif; ?>
-						<?php if (!empty ($settings['foodhut_phone']) ) : ?>
-							<p><span class="ti-support pr-3"></span> <?php echo esc_html($settings['foodhut_phone']); ?></p>
-						<?php endif; ?>
-						<?php if (!empty ($settings['foodhut_email']) ) : ?>
-							<p><span class="ti-email pr-3"></span> <?php echo esc_html($settings['foodhut_email']); ?></p>
-						<?php endif; ?>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- book a table Section  -->
+    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+        <div class="">
+            <h2 class="section-title mb-5"><?php echo esc_html($settings['foodhut_main_title']); ?></h2>
+            <form class="row mb-5" action="#">
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="name" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Your Name">
+                </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="email" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="EMAIL">
+                </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="tel" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="Phone">
+                </div>
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2">
+                    <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" placeholder="NUMBER OF GUESTS" max="20" min="0">
+                </div>
+            </form>
+            <a href="#" class="btn btn-lg btn-primary" id="rounded-btn">BOOk A TABLE</a>
+        </div>
+    </div>
 
 		<?php
 	}
