@@ -115,7 +115,7 @@ class Foodhut_Wigets_Plugin {
 	 */
 	public function register_widgets( $widgets_manager ) {
 		// Its is now safe to include Widgets files
-		require_once( __DIR__ . '/widgets/hello-world.php' );
+		require_once( __DIR__ . '/widgets/foodhut-hero.php' );
 		require_once( __DIR__ . '/widgets/inline-editing.php' );
 
 		// Register Widgets

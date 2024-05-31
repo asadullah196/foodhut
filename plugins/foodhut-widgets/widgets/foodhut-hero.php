@@ -7,9 +7,9 @@ use Elementor\Controls_Manager;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Elementor Hello World
+ * Elementor Foodhut hero
  *
- * Elementor widget for hello world.
+ * Elementor widget for Foodhut hero.
  *
  * @since 1.0.0
  */
@@ -25,7 +25,7 @@ class Hello_World extends Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'hello-world';
+		return 'foodhut-hero';
 	}
 
 	/**
@@ -38,7 +38,7 @@ class Hello_World extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Hello World', 'food-hut-widgets' );
+		return __( 'Foodhut Hero', 'food-hut-widgets' );
 	}
 
 	/**

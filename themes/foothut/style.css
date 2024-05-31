@@ -70,5 +70,5 @@
 
 /*Elementor extra padding removed css */
 .elementor-element.elementor-element-433db37.e-con-full.e-flex.e-con.e-parent.e-lazyloaded {
-    padding: 0;
+    padding: 0 !important;
 }
