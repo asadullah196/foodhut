@@ -101,7 +101,7 @@ class Foodhut_Find_Us extends Widget_Base {
 		$this->start_controls_section(
 			'foodhut_contact_style',
 			[
-				'label' => __( 'Style', 'food-hut-widgets' ),
+				'label' => __( 'Content', 'food-hut-widgets' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -110,8 +110,9 @@ class Foodhut_Find_Us extends Widget_Base {
 			'foodhut_main_title',
 			[
 				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'label_block' => true,
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
+				'default' => esc_html__( 'Find Us', 'food-hut-widgets' ),
 				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
 			]
 		);
@@ -128,45 +129,59 @@ class Foodhut_Find_Us extends Widget_Base {
 		);
 
 		$this->add_control(
-			'foodhut_main_title',
+			'foodhut_address',
 			[
-				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'label' => esc_html__( 'Address', 'food-hut-widgets' ),				
+				'label_block' => true,
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
-				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
+				'default' => esc_html__( '12345 Fake ST NoWhere, AB Country', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your address here', 'food-hut-widgets' ),
 			]
 		);
 
 		$this->add_control(
-			'foodhut_main_title',
+			'foodhut_phone',
 			[
-				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'label' => esc_html__( 'Phone', 'food-hut-widgets' ),
+				'label_block' => true,
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
-				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
+				'default' => esc_html__( '(123) 456-7890', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your phone number here', 'food-hut-widgets' ),
 			]
 		);
 
 		$this->add_control(
-			'foodhut_main_title',
+			'foodhut_email',
 			[
-				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'label' => esc_html__( 'Email', 'food-hut-widgets' ),
+				'label_block' => true,
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
-				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
+				'default' => esc_html__( 'info@website.com', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your email here', 'food-hut-widgets' ),
+			]
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'foodhut_contact_map',
+			[
+				'label' => __( 'Map', 'food-hut-widgets' ),
+				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_control(
-			'foodhut_main_title',
+			'foodhut_map_key',
 			[
-				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
+				'label' => esc_html__( 'Map Key', 'food-hut-widgets' ),
+				'label_block' => true,
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
-				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
+				'default' => esc_html__( 'AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w', 'food-hut-widgets' ),
+				'placeholder' => esc_html__( 'Type your map key here', 'food-hut-widgets' ),
 			]
 		);
-		
+
 		$this->end_controls_section();
 	}
 
@@ -183,16 +198,42 @@ class Foodhut_Find_Us extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		?>
 
-		<!-- header -->
-		<header id="home" class="header" style="background-image: url('<?php echo esc_url($settings['foodhut_main_hero_bg']['url']); ?>'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; background-color: #1f1f1f;">
-			<div class="overlay text-white text-center">
-				<h1 class="display-2 font-weight-bold my-3"><?php echo esc_html($settings['foodhut_main_hero_title']); ?></h1>
-				<h2 class="display-4 mb-5"><?php echo esc_html($settings['foodhut_main_hero_sub_title']); ?></h2>
-				<?php if ( ! empty( $settings['foodhut_main_hero_btn_url']['url'] ) ) : ?>
-					<a class="btn btn-lg btn-primary" href="<?php echo esc_url($settings['foodhut_main_hero_btn_url']['url']); ?>"><?php echo esc_html($settings['foodhut_main_hero_btn_text']); ?></a>
-				<?php endif; ?>
+		<!-- CONTACT Bottom Section  -->
+		<div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+			<div class="row">
+				<div class="col-md-6 px-0">
+					<div id="map" style="width: 100%; height: 100%; min-height: 400px"></div>
+				</div>
+				<div class="col-md-6 px-5 has-height-lg middle-items">
+					<h3>FIND US</h3>
+					<p>
+						<?php
+							// Check if Elementor is in edit mode
+							$is_edit_mode = \Elementor\Plugin::$instance->editor->is_edit_mode();
+
+							if ( $is_edit_mode ) {
+								// Output the content with tags in the backend (editor)
+								echo wp_kses_post( $settings['foodhut_description'] );
+							} else {
+								// Output the content without tags in the frontend
+								echo esc_html( wp_strip_all_tags( $settings['foodhut_description'] ) );
+							}
+						?>
+					</p>
+					<div class="text-muted">
+						<?php if (!empty ($settings['foodhut_address']) ) : ?>
+							<p><span class="ti-location-pin pr-3"></span> <?php echo esc_html($settings['foodhut_address']); ?></p>
+						<?php endif; ?>
+						<?php if (!empty ($settings['foodhut_phone']) ) : ?>
+							<p><span class="ti-support pr-3"></span> <?php echo esc_html($settings['foodhut_phone']); ?></p>
+						<?php endif; ?>
+						<?php if (!empty ($settings['foodhut_email']) ) : ?>
+							<p><span class="ti-email pr-3"></span> <?php echo esc_html($settings['foodhut_email']); ?></p>
+						<?php endif; ?>
+					</div>
+				</div>
 			</div>
-		</header>
+		</div>
 
 		<?php
 	}
