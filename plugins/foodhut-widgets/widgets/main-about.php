@@ -122,7 +122,7 @@ class Foodhut_Main_About extends Widget_Base {
 			[
 				'label' => esc_html__( 'Title', 'food-hut-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Food Hut', 'food-hut-widgets' ),
+				'default' => esc_html__( 'About Us', 'food-hut-widgets' ),
 				'placeholder' => esc_html__( 'Type your title here', 'food-hut-widgets' ),
 			]
 		);
@@ -156,7 +156,7 @@ class Foodhut_Main_About extends Widget_Base {
 		<!--  About Section  -->
 		<div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
 			<div class="row">
-				<div class="col-lg-6 has-img-bg"></div>
+				<div class="col-lg-6 has-img-bg" style="background-image: url('<?php echo esc_url($settings['foodhut_main_hero_bg']['url']); ?>'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; background-color: #1f1f1f;"></div>
 				<div class="col-lg-6">
 					<div class="row justify-content-center">
 						<div class="col-sm-8 py-5 my-5">
