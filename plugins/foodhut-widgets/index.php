@@ -1,2 +1,2 @@
 <?php
-// Silence is golden. Testing changes
+// Silence is golden.
